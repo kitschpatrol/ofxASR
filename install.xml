@@ -1,0 +1,49 @@
+<install>
+    
+    <version>0.1.2</version>
+    <author>Jimbo Zhang</author>
+    <url></url>
+    <requires></requires>
+    
+    <add>    
+        
+        <!--     =====================================================================    -->
+        <!--    ========================== add per project using this addon =========    -->
+        <!--     =====================================================================    -->
+    
+        <src>
+            <folder name="addons/ofxASR/src">
+                <file>../../../addons/ofxASR/src/ofxASR.h</file>
+                <file>../../../addons/ofxASR/src/ofxBaseASR.h</file>
+                <file>../../../addons/ofxASR/src/ofxSphinxASR.h</file>
+                <file>../../../addons/ofxASR/src/ofxSphinxASR.cpp</file>
+            </folder>
+        </src>
+        
+        <include>
+            <path>../../../addons/ofxASR/src</path>
+            <path>../../../addons/ofxASR/libs/sphinx/include/sphinxbase</path>
+            <path>../../../addons/ofxASR/libs/sphinx/include/sphinx3</path>
+        </include>
+        
+        <link>
+            <lib os="win32" compiler="visualstudio">../../../addons/ofxASR/libs/sphinx/lib/win32/s3decoder.lib</lib>
+            <lib os="win32" compiler="visualstudio">../../../addons/ofxASR/libs/sphinx/lib/win32/sphinxbase.lib</lib>      
+            <lib os="mac"   compiler="xcode">../../../addons/ofxASR/libs/sphinx/lib/osx/libsphinxbase.a</lib>
+            <lib os="mac"   compiler="xcode">../../../addons/ofxASR/libs/sphinx/lib/osx/libs3decoder.a</lib>      
+            <lib os="linux" compiler="codeblocks, makefile">../../../addons/ofxASR/libs/sphinx/lib/linux/libsphinxbase.a</lib>
+            <lib os="linux" compiler="codeblocks, makefile">../../../addons/ofxASR/libs/sphinx/lib/linux/libs3decoder.a</lib>
+        </link>
+        
+        <export>
+            <export os="win32" compiler="visualstudio">../../../addons/ofxASR/libs/sphinx/lib/win32/s3decoder.dll</export>
+            <export os="win32" compiler="visualstudio">../../../addons/ofxASR/libs/sphinx/lib/win32/sphinxbase.dll</export>
+            <export os="mac"   compiler="xcode">../../../addons/ofxASR/libs/sphinx/lib/osx/libsphinxbase.dylib</export>
+            <export os="mac"   compiler="xcode">../../../addons/ofxASR/libs/sphinx/lib/osx/libs3decoder.dylib</export>
+            <export os="linux" compiler="codeblocks, makefile">../../../addons/ofxASR/libs/sphinx/lib/linux/libsphinxbase.so</export>
+            <export os="linux" compiler="codeblocks, makefile">../../../addons/ofxASR/libs/sphinx/lib/linux/libs3decoder.so</export>
+        </export>
+        
+    </add>
+     
+</install>
