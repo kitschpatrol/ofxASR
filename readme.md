@@ -38,7 +38,7 @@ You also need a Sphinx-compatible resource package with an acoustic model, a lan
 - [`typical_model.tar.gz`](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ofxasr/typical_model.tar.gz): a small model from Sphinx3 that only recognizes English digits.
 - [`sphinxmodel_voxforge-en-r0_1_3.tar.gz`](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ofxasr/sphinxmodel_voxforge-en-r0_1_3.tar.gz): a general English model from [VoxForge](https://www.voxforge.org/).
 
-Please see the archived Google Code [FAQ](https://code.google.com/archive/p/ofxasr/wikis/FAQ.wiki) for more info on getting started.
+Please see the archived Google Code [FAQ](https://code.google.com/archive/p/ofxasr/wikis/FAQ.wiki) for more info on getting started. The FAQ, the original downloads, and a source snapshot are also kept in the [`archive`](archive) folder.
 
 ### Installation
 
