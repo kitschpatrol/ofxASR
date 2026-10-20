@@ -26,8 +26,6 @@
 ***************************************************************************/
 #ifdef WIN32
 #include <io.h>
-#include <direct.h>
-#define getcwd _getcwd
 #else
 #include <unistd.h>
 #endif
@@ -44,9 +42,6 @@ ofxSphinxASR::ofxSphinxASR()
 ofxSphinxASR::~ofxSphinxASR() {}
 int ofxSphinxASR::engineInit(ofAsrEngineArgs *e)
 {
-    
-    cout << "Init engine: " << e->sphinxmodel_am.c_str() << endl;
-    
 #if defined TARGET_WIN32
     char cfg_filename[] = "sphinx.cfg";
     char grammarJSGF_filename[] = "grammar.jsgf";
@@ -70,16 +65,11 @@ int ofxSphinxASR::engineInit(ofAsrEngineArgs *e)
 	
 	char cur_path[1024];
 	getcwd(cur_path, 1024);
-    
     fprintf(cfg_fp, "-samprate %d\n", e->samplerate);
     fprintf(cfg_fp, "-hmm %s/%s\n", cur_path, e->sphinxmodel_am.c_str());
     fprintf(cfg_fp, "-dict %s/%s\n", cur_path, e->sphinxmodel_dict.c_str());
     fprintf(cfg_fp, "-fdict %s/%s\n", cur_path, e->sphinxmodel_fdict.c_str());
     fprintf(cfg_fp, "-lm %s/%s\n", cur_path, e->sphinxmodel_lm.c_str());
-
-    //fprintf(cfg_fp, "-feat s2_4x\n");
-    
-    
     if (e->sphinx_mode == 2) {
         if(e->sphinx_candidate_sentences.size() < 1) {
             printf("Warning: The word list is empty! Use mode 4.\n");
@@ -110,15 +100,9 @@ int ofxSphinxASR::engineInit(ofAsrEngineArgs *e)
         jsgf_grammar_free(jsgf);
         fprintf(cfg_fp, "-fsg %s\n", grammarFSG_filename);
     }
-    
     fprintf(cfg_fp, "-op_mode %d\n", e->sphinx_mode);
     fclose(cfg_fp);
-    
-    cout << cfg_fp << endl;
-    
-    
     err_set_logfp(NULL); // disable logs
-    
     cmd_ln_t *config = NULL;
     config = cmd_ln_parse_file_r(config, S3_DECODE_ARG_DEFS, cfg_filename, TRUE);
     if (config == NULL) {
@@ -128,8 +112,6 @@ int ofxSphinxASR::engineInit(ofAsrEngineArgs *e)
     if (s3_decode_init(decoder, config) != S3_DECODE_SUCCESS) {
         return OFXASR_FAIL_INIT_DECODER;
     }
-    
-    //    cout << "Config: " << cfg_filename << endl;
     fe = fe_init_auto_r(config);
     if (fe == NULL) {
         return OFXASR_FAIL_INIT_FRONTEND;

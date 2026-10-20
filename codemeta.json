@@ -1,0 +1,44 @@
+{
+  "@context": "https://w3id.org/codemeta/3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "ofxASR",
+  "version": "0.1.2",
+  "description": "An openFrameworks addon for speech recognition, using CMU Sphinx. Mirror of Jimbo Zhang's Google Code project.",
+  "author": {
+    "@type": "Person",
+    "name": "Jimbo Zhang",
+    "email": "dr.jimbozhang@gmail.com"
+  },
+  "keywords": [
+    "openframeworks",
+    "ofx-addon",
+    "speech-recognition",
+    "sphinx",
+    "asr"
+  ],
+  "programmingLanguage": "C++",
+  "operatingSystem": ["Windows", "macOS", "Linux"],
+  "url": "https://github.com/kitschpatrol/ofxASR",
+  "codeRepository": "https://github.com/kitschpatrol/ofxASR.git",
+  "issueTracker": "https://github.com/kitschpatrol/ofxASR/issues",
+  "license": "https://spdx.org/licenses/GPL-3.0-or-later",
+  "dateCreated": "2013-07-26",
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "openFrameworks",
+      "codeRepository": "https://github.com/openframeworks/openFrameworks.git",
+      "version": "0.061"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Sphinx3",
+      "url": "https://cmusphinx.github.io"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "SphinxBase",
+      "codeRepository": "https://github.com/cmusphinx/sphinxbase.git"
+    }
+  ]
+}
