@@ -6,7 +6,7 @@
 
 <!-- badges -->
 
-[![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-yellow.svg)](https://spdx.org/licenses/GPL-3.0-only)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit)
 
 <!-- /badges -->
 
@@ -99,6 +99,10 @@ char *text = engine->engineGetText(); // NULL if nothing was recognized
 
 ## License
 
-[GPL-3.0-or-later](LICENSE) © Jimbo Zhang
+[MIT](license.txt) © Jimbo Zhang
 
 <!-- /license -->
+
+Versions 0.10 and 0.14 of ofxASR, released on Google Code, had GPL-3.0-or-later notices in their source file headers. The final version in the project's SVN repository changed the headers in [`src`](src) to MIT, and the [Google Code project page](https://code.google.com/archive/p/ofxasr) lists the license as MIT. The example app's headers in [`example`](example) still have the GPL-3.0-or-later notice.
+
+Sphinx3 and SphinxBase, bundled in [`libs/sphinx`](libs/sphinx), are © Carnegie Mellon University and others, and are distributed under BSD-style licenses. See the notices in their [headers](libs/sphinx/include).

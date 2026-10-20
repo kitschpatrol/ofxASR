@@ -79,7 +79,7 @@ In the `addons/ofxASR/example` folder, there is a example program that demonstra
 
 A resource package in fact is a folder that contains dictionary, AM and LM. To get a better resource package, you can download components from somewhere else. Here are some sites:
 
-- http://www.keithv.com/software/sphinx/
+- https://www.keithv.com/software/sphinx/
 - http://www.repository.voxforge1.org/downloads/Main/Trunk/AcousticModels/Sphinx/
 
 And there are many other sites also provides sphinx resource.

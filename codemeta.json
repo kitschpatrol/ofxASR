@@ -21,7 +21,7 @@
   "url": "https://github.com/kitschpatrol/ofxASR",
   "codeRepository": "https://github.com/kitschpatrol/ofxASR.git",
   "issueTracker": "https://github.com/kitschpatrol/ofxASR/issues",
-  "license": "https://spdx.org/licenses/GPL-3.0-or-later",
+  "license": "https://spdx.org/licenses/MIT",
   "dateCreated": "2013-07-26",
   "softwareRequirements": [
     {
